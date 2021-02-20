@@ -21,6 +21,6 @@ def list_of_multiples(number, length_index):
     return 'El primer parámetro debe ser únicamente un número entero positivo'
   if not(isinstance(length_index, int)): #Comparo si length_index es del tipo int
     return 'El segundo parámetro debe ser únicamente un número entero positivo'
-  if number > 0 or length_index > 0: #Comparo si ambos parámetros son mayores que cero
+  if number < 0 or length_index < 0: #Comparo si ambos parámetros son mayores que cero
     return 'Esta función sólo acepta números mayores que cero'
   return [number * i for i in range(1, length_index + 1)]
